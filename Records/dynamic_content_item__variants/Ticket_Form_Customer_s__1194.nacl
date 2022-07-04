@@ -1,0 +1,10 @@
+zendesk_support.dynamic_content_item__variants Ticket_Form_Customer_s__1194@uumuu {
+  content = "Soy un cliente"
+  locale_id = zendesk_support.locale.instance.es_419@b
+  outdated = false
+  active = true
+  default = false
+  _parent = [
+    zendesk_support.dynamic_content_item.instance.Ticket_Form_Customer@s,
+  ]
+}

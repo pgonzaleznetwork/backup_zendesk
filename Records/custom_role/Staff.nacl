@@ -1,0 +1,44 @@
+zendesk_support.custom_role Staff {
+  name = "Staff"
+  description = "Can edit tickets within their groups"
+  configuration = {
+    chat_access = true
+    manage_business_rules = false
+    manage_dynamic_content = false
+    manage_extensions_and_channels = false
+    manage_facebook = false
+    organization_editing = false
+    organization_notes_editing = false
+    ticket_deletion = false
+    view_deleted_tickets = false
+    ticket_tag_editing = false
+    twitter_search_access = false
+    forum_access_restricted_content = false
+    end_user_list_access = "full"
+    ticket_access = "within-groups"
+    ticket_comment_access = "public"
+    voice_access = true
+    moderate_forums = false
+    group_access = false
+    light_agent = false
+    side_conversation_create = true
+    assign_tickets_to_any_group = false
+    end_user_profile_access = "readonly"
+    explore_access = "readonly"
+    forum_access = "full"
+    macro_access = "manage-personal"
+    report_access = "readonly"
+    ticket_editing = true
+    ticket_merge = false
+    view_access = "manage-personal"
+    user_view_access = "manage-personal"
+    voice_dashboard_access = false
+    manage_contextual_workspaces = false
+    manage_organization_fields = false
+    manage_ticket_fields = false
+    manage_ticket_forms = false
+    manage_user_fields = false
+    manage_automations = false
+    manage_triggers = false
+  }
+}

@@ -1,0 +1,10 @@
+zendesk_support.dynamic_content_item__variants About_Field_Title_s__1@uumuu {
+  content = "What is this about?"
+  locale_id = zendesk_support.locale.instance.en_US@b
+  outdated = false
+  active = true
+  default = true
+  _parent = [
+    zendesk_support.dynamic_content_item.instance.About_Field_Title@s,
+  ]
+}

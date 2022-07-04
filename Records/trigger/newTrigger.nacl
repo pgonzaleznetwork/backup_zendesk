@@ -1,0 +1,21 @@
+zendesk_support.trigger newTrigger {
+  title = "newTrigger"
+  active = true
+  actions = [
+    {
+      field = "status"
+      value = "open"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "pending"
+      },
+    ]
+  }
+  raw_title = "newTrigger"
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

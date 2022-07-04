@@ -1,0 +1,48 @@
+zendesk_support.trigger Notify_assignee_of_comment_update@s {
+  title = "Notify assignee of comment update"
+  active = true
+  actions = [
+    {
+      field = "notification_user"
+      value = [
+        "assignee_id",
+        "[{{ticket.account}}] Re: {{ticket.title}}",
+        '''
+This ticket (#{{ticket.id}}) has been updated.
+
+{{ticket.comments_formatted}}
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "comment_is_public"
+        operator = "is"
+        value = "not_relevant"
+      },
+      {
+        field = "assignee_id"
+        operator = "is_not"
+        value = "current_user"
+      },
+      {
+        field = "assignee_id"
+        operator = "is_not"
+        value = "requester_id"
+      },
+      {
+        field = "assignee_id"
+        operator = "not_changed"
+      },
+      {
+        field = "status"
+        operator = "not_value_previous"
+        value = "solved"
+      },
+    ]
+  }
+  raw_title = "Notify assignee of comment update"
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

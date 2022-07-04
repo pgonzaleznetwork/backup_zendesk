@@ -1,0 +1,8 @@
+zendesk_support.organization_field_order {
+  organization_field_ids = [
+    zendesk_support.organization_field.instance.age,
+    zendesk_support.organization_field.instance.another_drop_down,
+    zendesk_support.organization_field.instance.now,
+    zendesk_support.organization_field.instance.oftoremove,
+  ]
+}

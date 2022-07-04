@@ -1,0 +1,33 @@
+zendesk_support.trigger Notify_assignee_of_assignment@s {
+  title = "Notify assignee of assignment"
+  active = true
+  actions = [
+    {
+      field = "notification_user"
+      value = [
+        "assignee_id",
+        "[{{ticket.account}}] Assignment: {{ticket.title}}",
+        '''
+You have been assigned to this ticket (#{{ticket.id}}).
+
+{{ticket.comments_formatted}}
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "assignee_id"
+        operator = "changed"
+      },
+      {
+        field = "assignee_id"
+        operator = "is_not"
+        value = "current_user"
+      },
+    ]
+  }
+  raw_title = "Notify assignee of assignment"
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

@@ -1,0 +1,44 @@
+zendesk_support.custom_role Team_lead@s {
+  name = "Team lead"
+  description = "Can manage all tickets and forums"
+  configuration = {
+    chat_access = true
+    manage_business_rules = false
+    manage_dynamic_content = false
+    manage_extensions_and_channels = false
+    manage_facebook = false
+    organization_editing = true
+    organization_notes_editing = true
+    ticket_deletion = true
+    view_deleted_tickets = true
+    ticket_tag_editing = true
+    twitter_search_access = false
+    forum_access_restricted_content = false
+    end_user_list_access = "full"
+    ticket_access = "all"
+    ticket_comment_access = "public"
+    voice_access = true
+    moderate_forums = false
+    group_access = true
+    light_agent = false
+    side_conversation_create = true
+    assign_tickets_to_any_group = false
+    end_user_profile_access = "full"
+    explore_access = "edit"
+    forum_access = "full"
+    macro_access = "full"
+    report_access = "full"
+    ticket_editing = true
+    ticket_merge = true
+    view_access = "full"
+    user_view_access = "full"
+    voice_dashboard_access = true
+    manage_contextual_workspaces = false
+    manage_organization_fields = false
+    manage_ticket_fields = false
+    manage_ticket_forms = false
+    manage_user_fields = false
+    manage_automations = false
+    manage_triggers = false
+  }
+}

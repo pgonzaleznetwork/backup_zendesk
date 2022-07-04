@@ -1,0 +1,80 @@
+zendesk_support.view Support_Tickets_APAC@s {
+  title = "Support Tickets APAC"
+  active = true
+  execution = {
+    group_order = "desc"
+    sort_order = "desc"
+    columns = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+      },
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+    fields = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+      },
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "open"
+      },
+      {
+        field = "priority"
+        operator = "is"
+        value = "low"
+      },
+    ]
+    any = [
+      {
+        field = "type"
+        operator = "is"
+        value = "question"
+      },
+      {
+        field = "type"
+        operator = "is"
+        value = "task"
+      },
+    ]
+  }
+  watchable = true
+  raw_title = "Support Tickets APAC"
+}

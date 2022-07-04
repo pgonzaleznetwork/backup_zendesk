@@ -1,0 +1,104 @@
+zendesk_support.ticket_form Noam_TicketForm@s {
+  name = "Noam TicketForm"
+  raw_name = "Noam TicketForm"
+  display_name = "Crazy Ticket form!!!"
+  raw_display_name = "Crazy Ticket form!!!"
+  end_user_visible = true
+  ticket_field_ids = [
+    zendesk_support.ticket_field.instance.status_Status,
+    zendesk_support.ticket_field.instance.group_Group,
+    zendesk_support.ticket_field.instance.assignee_Assignee,
+    zendesk_support.ticket_field.instance.subject_Subject,
+    zendesk_support.ticket_field.instance.description_Description,
+    zendesk_support.ticket_field.instance.priority_Priority,
+    zendesk_support.ticket_field.instance.regexp_TestRegex1,
+    zendesk_support.ticket_field.instance.multiselect_TestMultiSelect1,
+    zendesk_support.ticket_field.instance.tagger_tagger11,
+    zendesk_support.ticket_field.instance.tickettype_Type,
+    zendesk_support.ticket_field.instance.tagger_TestDropdown1_updated@us,
+  ]
+  active = true
+  default = false
+  in_all_brands = true
+  restricted_brand_ids = [
+    zendesk_support.brand.instance.Salto,
+  ]
+  end_user_conditions = [
+    {
+      parent_field_id = zendesk_support.ticket_field.instance.tagger_tagger11
+      parent_field_type = "tagger"
+      value = zendesk_support.ticket_field__custom_field_options.instance.tagger_tagger11__v11
+      child_fields = [
+        {
+          id = zendesk_support.ticket_field.instance.tagger_TestDropdown1_updated@us
+          is_required = true
+        },
+      ]
+    },
+  ]
+  agent_conditions = [
+    {
+      parent_field_id = zendesk_support.ticket_field.instance.priority_Priority
+      parent_field_type = "priority"
+      value = "low"
+      child_fields = [
+        {
+          id = zendesk_support.ticket_field.instance.regexp_TestRegex1
+          is_required = false
+          required_on_statuses = {
+            type = "SOME_STATUSES"
+            statuses = [
+              "new",
+              "open",
+            ]
+          }
+        },
+        {
+          id = zendesk_support.ticket_field.instance.multiselect_TestMultiSelect1
+          is_required = false
+          required_on_statuses = {
+            type = "NO_STATUSES"
+          }
+        },
+      ]
+    },
+    {
+      parent_field_id = zendesk_support.ticket_field.instance.priority_Priority
+      parent_field_type = "priority"
+      value = "normal"
+      child_fields = [
+        {
+          id = zendesk_support.ticket_field.instance.regexp_TestRegex1
+          is_required = true
+          required_on_statuses = {
+            type = "SOME_STATUSES"
+            statuses = [
+              "solved",
+            ]
+          }
+        },
+        {
+          id = zendesk_support.ticket_field.instance.multiselect_TestMultiSelect1
+          is_required = true
+          required_on_statuses = {
+            type = "ALL_STATUSES"
+          }
+        },
+      ]
+    },
+    {
+      parent_field_id = zendesk_support.ticket_field.instance.tagger_tagger11
+      parent_field_type = "tagger"
+      value = zendesk_support.ticket_field__custom_field_options.instance.tagger_tagger11__v223
+      child_fields = [
+        {
+          id = zendesk_support.ticket_field.instance.priority_Priority
+          is_required = false
+          required_on_statuses = {
+            type = "NO_STATUSES"
+          }
+        },
+      ]
+    },
+  ]
+}

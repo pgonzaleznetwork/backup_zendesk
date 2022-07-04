@@ -1,0 +1,16 @@
+zendesk_support.ticket_field subject_Subject {
+  type = "subject"
+  title = "Subject"
+  raw_title = "Subject"
+  description = ""
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "Subject"
+  raw_title_in_portal = "Subject"
+  visible_in_portal = true
+  editable_in_portal = true
+  required_in_portal = true
+  removable = false
+}

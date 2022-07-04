@@ -1,0 +1,3 @@
+zendesk_support.trigger_category Field_Updates@s {
+  name = "Field Updates"
+}

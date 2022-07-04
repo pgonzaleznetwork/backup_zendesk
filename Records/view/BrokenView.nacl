@@ -1,0 +1,117 @@
+zendesk_support.view BrokenView {
+  title = "BrokenView"
+  active = true
+  execution = {
+    group_by = zendesk_support.ticket_field.instance.decimal_ToRemove
+    group_order = "desc"
+    sort_by = zendesk_support.ticket_field.instance.decimal_ToRemove
+    sort_order = "desc"
+    group = {
+      id = zendesk_support.ticket_field.instance.decimal_ToRemove
+      title = "ToRemove"
+      type = "decimal"
+      order = "desc"
+    }
+    sort = {
+      id = zendesk_support.ticket_field.instance.decimal_ToRemove
+      title = "ToRemove"
+      type = "decimal"
+      order = "desc"
+    }
+    columns = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+      },
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+      {
+        id = zendesk_support.ticket_field.instance.decimal_ToRemove
+        title = "ToRemove"
+        type = "decimal"
+      },
+    ]
+    fields = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+      },
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+    custom_fields = [
+      {
+        id = zendesk_support.ticket_field.instance.decimal_ToRemove
+        title = "ToRemove"
+        type = "decimal"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = zendesk_support.ticket_field.instance.tagger_tagger11
+        operator = "is"
+        value = zendesk_support.ticket_field__custom_field_options.instance.tagger_tagger11__v223
+      },
+      {
+        field = "brand_id"
+        operator = "is"
+        value = zendesk_support.brand.instance.brandToRemove
+      },
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk_support.ticket_form.instance.TFToRemove
+      },
+      {
+        field = "group_id"
+        operator = "is"
+        value = zendesk_support.group.instance.GroupToRemove
+      },
+    ]
+    any = [
+      {
+        field = zendesk_support.ticket_field.instance.date_ToRemove2
+        operator = "is"
+        value = "2022-05-09"
+      },
+    ]
+  }
+  restriction = {
+    type = "Group"
+    ids = [
+      zendesk_support.group.instance.GroupToRemove,
+    ]
+  }
+  watchable = false
+  raw_title = "BrokenView"
+}

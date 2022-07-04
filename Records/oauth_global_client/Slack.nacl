@@ -1,0 +1,6 @@
+zendesk_support.oauth_global_client Slack {
+  name = "Slack"
+  identifier = "zdg-zis_slack"
+  company = "z3n"
+  description = "Zendesk integration for your Slack workspace"
+}

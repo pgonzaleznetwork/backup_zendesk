@@ -1,0 +1,20 @@
+zendesk_support.ticket_form TicketFormOne {
+  name = "TicketFormOne"
+  raw_name = "TicketFormOne"
+  display_name = "TicketFormOne - 1"
+  raw_display_name = "TicketFormOne - 1"
+  end_user_visible = true
+  ticket_field_ids = [
+    zendesk_support.ticket_field.instance.status_Status,
+    zendesk_support.ticket_field.instance.group_Group,
+    zendesk_support.ticket_field.instance.assignee_Assignee,
+    zendesk_support.ticket_field.instance.subject_Subject,
+    zendesk_support.ticket_field.instance.description_Description,
+    zendesk_support.ticket_field.instance.priority_Priority,
+    zendesk_support.ticket_field.instance.tagger_tagger11,
+    zendesk_support.ticket_field.instance.tickettype_Type,
+  ]
+  active = true
+  default = false
+  in_all_brands = true
+}

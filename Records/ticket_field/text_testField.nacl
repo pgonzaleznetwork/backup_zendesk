@@ -1,0 +1,26 @@
+zendesk_support.ticket_field text_testField {
+  type = "text"
+  title = "testField"
+  raw_title = "testField"
+  description = ""
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "abc  bbabccc"
+  raw_title_in_portal = "{{dc.test}} {{dc.notExist}} bb{{dc.test}}cc"
+  visible_in_portal = true
+  editable_in_portal = true
+  required_in_portal = false
+  removable = true
+  _generated_dependencies = [
+    {
+      reference = zendesk_support.dynamic_content_item.instance.test
+      occurrences = [
+        {
+          location = zendesk_support.ticket_field.instance.text_testField.raw_title_in_portal
+        },
+      ]
+    },
+  ]
+}

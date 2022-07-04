@@ -1,0 +1,85 @@
+zendesk_support.view New_tickets_in_your_groups@s {
+  title = "New tickets in your groups"
+  active = true
+  execution = {
+    group_by = "group"
+    group_order = "desc"
+    sort_by = "created"
+    sort_order = "desc"
+    group = {
+      id = "group"
+      title = "Group"
+      order = "desc"
+    }
+    sort = {
+      id = "created"
+      title = "Requested"
+      order = "desc"
+    }
+    columns = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "priority"
+        title = "Priority"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+    fields = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "priority"
+        title = "Priority"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "less_than"
+        value = "solved"
+      },
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = ""
+      },
+      {
+        field = "group_id"
+        operator = "is"
+        value = "current_groups"
+      },
+    ]
+  }
+  watchable = false
+  raw_title = "New tickets in your groups"
+}

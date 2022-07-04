@@ -1,0 +1,30 @@
+zendesk_support.ticket_form Customer_Ticket_Form@s {
+  name = "Customer Ticket Form"
+  raw_name = "Customer Ticket Form"
+  display_name = "I'm a customer"
+  raw_display_name = "{{dc.ticket_form_customer}}"
+  end_user_visible = true
+  ticket_field_ids = [
+    zendesk_support.ticket_field.instance.status_Status,
+    zendesk_support.ticket_field.instance.group_Group,
+    zendesk_support.ticket_field.instance.assignee_Assignee,
+    zendesk_support.ticket_field.instance.subject_Subject,
+    zendesk_support.ticket_field.instance.description_Description,
+    zendesk_support.ticket_field.instance.text_Salto_Id@us,
+    zendesk_support.ticket_field.instance.tickettype_Type,
+    zendesk_support.ticket_field.instance.priority_Priority,
+  ]
+  active = true
+  default = false
+  in_all_brands = true
+  _generated_dependencies = [
+    {
+      reference = zendesk_support.dynamic_content_item.instance.Ticket_Form_Customer@s
+      occurrences = [
+        {
+          location = zendesk_support.ticket_form.instance.Customer_Ticket_Form@s.raw_display_name
+        },
+      ]
+    },
+  ]
+}

@@ -1,0 +1,37 @@
+zendesk_support.macro MacroToRemove {
+  title = "MacroToRemove"
+  active = true
+  actions = [
+    {
+      field = "subject"
+      value = "abv"
+    },
+    {
+      field = "brand_id"
+      value = zendesk_support.brand.instance.brandToRemove
+    },
+    {
+      field = "ticket_form_id"
+      value = zendesk_support.ticket_form.instance.TFToRemove
+    },
+    {
+      field = "group_id"
+      value = zendesk_support.group.instance.GroupToRemove
+    },
+    {
+      field = zendesk_support.ticket_field.instance.tagger_tagger11
+      value = zendesk_support.ticket_field__custom_field_options.instance.tagger_tagger11__v223
+    },
+    {
+      field = zendesk_support.ticket_field.instance.checkbox_TestCheckbox1
+      value = "true"
+    },
+  ]
+  restriction = {
+    type = "Group"
+    ids = [
+      zendesk_support.group.instance.GroupToRemove,
+    ]
+  }
+  raw_title = "MacroToRemove"
+}

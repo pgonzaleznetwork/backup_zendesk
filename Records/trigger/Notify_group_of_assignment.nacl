@@ -1,0 +1,46 @@
+zendesk_support.trigger Notify_group_of_assignment@s {
+  title = "Notify group of assignment"
+  active = false
+  actions = [
+    {
+      field = "notification_group"
+      value = [
+        "group_id",
+        "[{{ticket.account}}] \"{{ticket.group.name}}\" assignment:  {{ticket.title}}",
+        '''
+This ticket (#{{ticket.id}}) has been assigned to group '{{ticket.group.name}}', of which you are a member.
+
+{{ticket.comments_formatted}}
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "group_id"
+        operator = "is_not"
+        value = ""
+      },
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = ""
+      },
+    ]
+    any = [
+      {
+        field = "group_id"
+        operator = "changed"
+        value = ""
+      },
+      {
+        field = "assignee_id"
+        operator = "changed"
+        value = ""
+      },
+    ]
+  }
+  raw_title = "Notify group of assignment"
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

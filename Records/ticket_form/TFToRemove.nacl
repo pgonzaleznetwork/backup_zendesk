@@ -1,0 +1,17 @@
+zendesk_support.ticket_form TFToRemove {
+  name = "TFToRemove"
+  raw_name = "TFToRemove"
+  display_name = ""
+  raw_display_name = ""
+  end_user_visible = false
+  ticket_field_ids = [
+    zendesk_support.ticket_field.instance.status_Status,
+    zendesk_support.ticket_field.instance.group_Group,
+    zendesk_support.ticket_field.instance.assignee_Assignee,
+    zendesk_support.ticket_field.instance.subject_Subject,
+    zendesk_support.ticket_field.instance.description_Description,
+  ]
+  active = true
+  default = false
+  in_all_brands = true
+}

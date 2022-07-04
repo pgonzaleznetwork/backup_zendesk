@@ -1,0 +1,60 @@
+zendesk_support.view Tickets_submitted_for_deletion@s {
+  title = "Tickets submitted for deletion"
+  active = true
+  execution = {
+    group_order = "desc"
+    sort_order = "desc"
+    columns = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+    fields = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "closed"
+      },
+      {
+        field = "current_tags"
+        operator = "includes"
+        value = "review_delete"
+      },
+    ]
+  }
+  watchable = true
+  raw_title = "Tickets submitted for deletion"
+}

@@ -1,0 +1,21 @@
+zendesk_support.trigger Assign_Account_Manager_to_High_Priority_Tickets@s {
+  title = "Assign Account Manager to High Priority Tickets"
+  active = true
+  actions = [
+    {
+      field = "follower"
+      value = "gil.hoffer@salto.io"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = zendesk_support.ticket_field.instance.tagger_Customer_Priority@us
+        operator = "is"
+        value = zendesk_support.ticket_field__custom_field_options.instance.tagger_Customer_Priority_us__Critical@uumuu
+      },
+    ]
+  }
+  raw_title = "Assign Account Manager to High Priority Tickets"
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

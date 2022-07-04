@@ -1,0 +1,68 @@
+zendesk_support.view Platinum {
+  title = "Platinum"
+  active = true
+  execution = {
+    group_order = "desc"
+    sort_order = "desc"
+    columns = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+      },
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+    fields = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+      },
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "pending"
+      },
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk_support.ticket_form.instance.Platinum
+      },
+    ]
+  }
+  watchable = true
+  raw_title = "Platinum"
+}

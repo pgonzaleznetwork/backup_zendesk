@@ -1,0 +1,8 @@
+zendesk_support.user_field__custom_field_options userfield1__v111 {
+  name = "v111"
+  raw_name = "v111"
+  value = "v111"
+  _parent = [
+    zendesk_support.user_field.instance.userfield1,
+  ]
+}

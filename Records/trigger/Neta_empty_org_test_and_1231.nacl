@@ -1,0 +1,21 @@
+zendesk_support.trigger Neta_empty_org_test_and_1231@s {
+  title = "Neta empty org test and 1231"
+  active = false
+  actions = [
+    {
+      field = "status"
+      value = "closed"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "organization_id"
+        operator = "is"
+        value = ""
+      },
+    ]
+  }
+  raw_title = "Neta empty org test and 1231"
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

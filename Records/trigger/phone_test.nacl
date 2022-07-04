@@ -1,0 +1,38 @@
+zendesk_support.trigger phone_test@s {
+  title = "phone test"
+  active = true
+  actions = [
+    {
+      field = "notification_sms_user"
+      value = [
+        "gil.hoffer@salto.io",
+        1500002631542,
+        "bla bla bla",
+      ]
+    },
+    {
+      field = "notification_sms_group"
+      value = [
+        zendesk_support.group.instance.Support,
+        1500002631542,
+        "hellow my name is",
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
+      },
+      {
+        field = "current_tags"
+        operator = "includes"
+        value = "yo"
+      },
+    ]
+  }
+  raw_title = "phone test"
+  category_id = zendesk_support.trigger_category.instance.Other
+}

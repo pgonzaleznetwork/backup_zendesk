@@ -1,0 +1,10 @@
+zendesk_support.dynamic_content_item__variants About_Option___Late_Order_ssbss__1@uuuuumuu {
+  content = "Late Order"
+  locale_id = zendesk_support.locale.instance.en_US@b
+  outdated = false
+  active = true
+  default = true
+  _parent = [
+    zendesk_support.dynamic_content_item.instance.About_Option___Late_Order@ssbss,
+  ]
+}

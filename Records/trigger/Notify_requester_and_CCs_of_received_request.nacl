@@ -1,0 +1,49 @@
+zendesk_support.trigger Notify_requester_and_CCs_of_received_request@s {
+  title = "Notify requester and CCs of received request"
+  active = true
+  actions = [
+    {
+      field = "notification_user"
+      value = [
+        "requester_and_ccs",
+        "[Request received]",
+        '''
+Your request ({{ticket.id}}) has been received and is being reviewed by our support staff.
+
+To add additional comments, reply to this email.
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Create"
+      },
+      {
+        field = "status"
+        operator = "is_not"
+        value = "solved"
+      },
+      {
+        field = "ticket_is_public"
+        operator = "is"
+        value = "public"
+      },
+      {
+        field = "comment_is_public"
+        operator = "is"
+        value = true
+      },
+      {
+        field = "role"
+        operator = "is"
+        value = "end_user"
+      },
+    ]
+  }
+  raw_title = "Notify requester and CCs of received request"
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

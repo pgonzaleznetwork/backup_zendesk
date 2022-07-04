@@ -1,0 +1,8 @@
+zendesk_support.ticket_field__custom_field_options tagger_TestDropdown1_updated_us__option3@uumuu {
+  name = "option3"
+  raw_name = "option3"
+  value = "option3"
+  _parent = [
+    zendesk_support.ticket_field.instance.tagger_TestDropdown1_updated@us,
+  ]
+}

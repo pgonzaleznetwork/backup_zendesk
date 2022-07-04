@@ -1,0 +1,17 @@
+zendesk_support.ticket_field integer_Time_spent_last_update__sec_@ussssjk {
+  type = "integer"
+  title = "Time spent last update (sec)"
+  raw_title = "Time spent last update (sec)"
+  description = "Time spent last update (sec)"
+  raw_description = "Time spent last update (sec)"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  regexp_for_validation = "\\A[-+]?\\d+\\z"
+  title_in_portal = "Time spent last update (sec)"
+  raw_title_in_portal = "Time spent last update (sec)"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+}

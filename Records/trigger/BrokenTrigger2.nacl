@@ -1,0 +1,106 @@
+zendesk_support.trigger BrokenTrigger2 {
+  title = "BrokenTrigger2"
+  active = true
+  actions = [
+    {
+      field = "status"
+      value = "hold"
+    },
+    {
+      field = zendesk_support.organization_field.instance.oftoremove
+      value = "123"
+    },
+    {
+      field = zendesk_support.user_field.instance.uftoremove
+      value = "667"
+    },
+    {
+      field = "brand_id"
+      value = zendesk_support.brand.instance.brandToRemove
+    },
+    {
+      field = "ticket_form_id"
+      value = zendesk_support.ticket_form.instance.TFToRemove
+    },
+    {
+      field = "group_id"
+      value = zendesk_support.group.instance.GroupToRemove
+    },
+    {
+      field = "set_schedule"
+      value = zendesk_support.business_hours_schedule.instance.scheduleToRemove
+    },
+    {
+      field = "notification_target"
+      value = [
+        zendesk_support.target.instance.TargetToRemove_url_target,
+        "abc",
+      ]
+    },
+    {
+      field = "notification_webhook"
+      value = [
+        zendesk_support.webhook.instance.WebhookToRemove,
+        [
+          [
+            "abc",
+            "1",
+          ],
+        ],
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "brand_id"
+        operator = "is"
+        value = zendesk_support.brand.instance.brandToRemove
+      },
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk_support.ticket_form.instance.TFToRemove
+      },
+      {
+        field = "group_id"
+        operator = "is"
+        value = zendesk_support.group.instance.GroupToRemove
+      },
+      {
+        field = "schedule_id"
+        operator = "is"
+        value = zendesk_support.business_hours_schedule.instance.scheduleToRemove
+      },
+      {
+        field = zendesk_support.organization_field.instance.oftoremove
+        operator = "is"
+        value = "123"
+      },
+      {
+        field = zendesk_support.user_field.instance.uftoremove
+        operator = "is"
+        value = "789"
+      },
+      {
+        field = "status"
+        operator = "is_not"
+        value = "new"
+      },
+    ]
+    any = [
+      {
+        field = "within_schedule"
+        operator = "is"
+        value = zendesk_support.business_hours_schedule.instance.scheduleToRemove
+      },
+      {
+        field = zendesk_support.ticket_field.instance.decimal_ToRemove
+        operator = "present"
+        value = ""
+      },
+    ]
+  }
+  raw_title = "BrokenTrigger2"
+  category_id = zendesk_support.trigger_category.instance.Other
+}

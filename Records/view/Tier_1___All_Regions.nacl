@@ -1,0 +1,91 @@
+zendesk_support.view Tier_1___All_Regions@ssbss {
+  title = "Tier 1 - All Regions"
+  active = true
+  execution = {
+    group_by = "status"
+    group_order = "desc"
+    sort_by = "priority"
+    sort_order = "desc"
+    group = {
+      id = "status"
+      title = "Status"
+      order = "desc"
+    }
+    sort = {
+      id = "priority"
+      title = "Priority"
+      order = "desc"
+    }
+    columns = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+      },
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+    fields = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+      },
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "less_than"
+        value = "solved"
+      },
+    ]
+    any = [
+      {
+        field = "group_id"
+        operator = "is"
+        value = zendesk_support.group.instance.Tier_1___AMER@ssbs
+      },
+      {
+        field = "group_id"
+        operator = "is"
+        value = zendesk_support.group.instance.Tier_1___EMEA@ssbs
+      },
+    ]
+  }
+  restriction = {
+    type = "User"
+    id = "pablo.gonzalez@salto.io"
+  }
+  watchable = true
+  raw_title = "Tier 1 - All Regions"
+}

@@ -1,0 +1,88 @@
+zendesk_support.view Management_Escalation_Cases___All@sssbs {
+  title = "Management Escalation Cases - All"
+  active = true
+  execution = {
+    group_order = "desc"
+    sort_order = "desc"
+    columns = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+      {
+        id = zendesk_support.ticket_field.instance.tagger_Escalation_Status@us
+        title = "Escalation Status"
+        type = "tagger"
+      },
+      {
+        id = zendesk_support.ticket_field.instance.tagger_Product_Area@us
+        title = "Product Area"
+        type = "tagger"
+      },
+    ]
+    fields = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+    custom_fields = [
+      {
+        id = zendesk_support.ticket_field.instance.tagger_Product_Area@us
+        title = "Product Area"
+        type = "tagger"
+      },
+      {
+        id = zendesk_support.ticket_field.instance.tagger_Escalation_Status@us
+        title = "Escalation Status"
+        type = "tagger"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "group_id"
+        operator = "is"
+        value = zendesk_support.group.instance.Support_Managers@s
+      },
+      {
+        field = "current_tags"
+        operator = "includes"
+        value = "escalated"
+      },
+    ]
+  }
+  restriction = {
+    type = "Group"
+    ids = [
+      zendesk_support.group.instance.Support_Managers@s,
+    ]
+  }
+  watchable = true
+  raw_title = "Management Escalation Cases - All"
+}

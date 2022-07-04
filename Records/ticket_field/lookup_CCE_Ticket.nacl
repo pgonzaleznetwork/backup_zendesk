@@ -1,0 +1,17 @@
+zendesk_support.ticket_field lookup_CCE_Ticket@us {
+  type = "lookup"
+  title = "CCE Ticket"
+  raw_title = "CCE Ticket"
+  description = ""
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "CCE Ticket"
+  raw_title_in_portal = "CCE Ticket"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+  relationship_target_type = "zen:ticket"
+}

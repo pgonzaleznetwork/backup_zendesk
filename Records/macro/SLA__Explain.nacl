@@ -1,0 +1,15 @@
+zendesk_support.macro SLA__Explain@f {
+  title = "SLA::Explain"
+  active = true
+  actions = [
+    {
+      field = "comment_mode_is_public"
+      value = "true"
+    },
+    {
+      field = "comment_value_html"
+      value = "<p>{{dc.support_slas}}<br></p><p><br></p><p>Regards,</p><p><span class=\"atwho-inserted\">{{ticket.assignee.name}}</span>​&nbsp;</p>"
+    },
+  ]
+  raw_title = "SLA::Explain"
+}

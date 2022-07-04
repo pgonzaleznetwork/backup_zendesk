@@ -1,0 +1,83 @@
+zendesk_support.view Pending_tickets@s {
+  title = "Pending tickets"
+  active = true
+  execution = {
+    group_by = "updated"
+    group_order = "asc"
+    sort_by = "nice_id"
+    sort_order = "desc"
+    group = {
+      id = "updated"
+      title = "Updated"
+      order = "asc"
+    }
+    sort = {
+      id = "ticket_id"
+      title = "ID"
+      order = "desc"
+    }
+    columns = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "priority"
+        title = "Priority"
+      },
+      {
+        id = "group"
+        title = "Group"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+    fields = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "priority"
+        title = "Priority"
+      },
+      {
+        id = "group"
+        title = "Group"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "pending"
+      },
+    ]
+  }
+  watchable = true
+  raw_title = "Pending tickets"
+}

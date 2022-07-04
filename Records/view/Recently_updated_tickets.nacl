@@ -1,0 +1,88 @@
+zendesk_support.view Recently_updated_tickets@s {
+  title = "Recently updated tickets"
+  active = true
+  execution = {
+    group_by = "status"
+    group_order = "asc"
+    sort_by = "updated"
+    sort_order = "desc"
+    group = {
+      id = "status"
+      title = "Status"
+      order = "asc"
+    }
+    sort = {
+      id = "updated"
+      title = "Updated"
+      order = "desc"
+    }
+    columns = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "priority"
+        title = "Priority"
+      },
+      {
+        id = "group"
+        title = "Group"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+    fields = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "priority"
+        title = "Priority"
+      },
+      {
+        id = "group"
+        title = "Group"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "updated_at"
+        operator = "less_than"
+        value = "24"
+      },
+      {
+        field = "status"
+        operator = "less_than"
+        value = "closed"
+      },
+    ]
+  }
+  watchable = false
+  raw_title = "Recently updated tickets"
+}

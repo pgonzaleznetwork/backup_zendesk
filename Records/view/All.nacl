@@ -1,0 +1,75 @@
+zendesk_support.view All {
+  title = "All"
+  active = true
+  execution = {
+    group_by = "priority"
+    group_order = "desc"
+    sort_by = "status"
+    sort_order = "desc"
+    group = {
+      id = "priority"
+      title = "Priority"
+      order = "desc"
+    }
+    sort = {
+      id = "status"
+      title = "Status"
+      order = "desc"
+    }
+    columns = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+      },
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+    fields = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+      },
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "less_than"
+        value = "closed"
+      },
+    ]
+  }
+  watchable = true
+  raw_title = "All"
+}

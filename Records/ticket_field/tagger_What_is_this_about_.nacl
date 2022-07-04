@@ -1,0 +1,33 @@
+zendesk_support.ticket_field tagger_What_is_this_about_@usssa {
+  type = "tagger"
+  title = "What is this about?"
+  raw_title = "{{dc.about_field_title}}"
+  description = ""
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "What is this about?"
+  raw_title_in_portal = "{{dc.about_field_title}}"
+  visible_in_portal = true
+  editable_in_portal = true
+  required_in_portal = false
+  removable = true
+  custom_field_options = [
+    zendesk_support.ticket_field__custom_field_options.instance.tagger_What_is_this_about__usssa__Late_Order@uuuuumuus,
+    zendesk_support.ticket_field__custom_field_options.instance.tagger_What_is_this_about__usssa__Missed_Package@uuuuumuus,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zendesk_support.dynamic_content_item.instance.About_Field_Title@s
+      occurrences = [
+        {
+          location = zendesk_support.ticket_field.instance.tagger_What_is_this_about_@usssa.raw_title
+        },
+        {
+          location = zendesk_support.ticket_field.instance.tagger_What_is_this_about_@usssa.raw_title_in_portal
+        },
+      ]
+    },
+  ]
+}

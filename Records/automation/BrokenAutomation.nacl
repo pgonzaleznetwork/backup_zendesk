@@ -1,0 +1,101 @@
+zendesk_support.automation BrokenAutomation {
+  title = "BrokenAutomation"
+  active = true
+  actions = [
+    {
+      field = "ticket_form_id"
+      value = zendesk_support.ticket_form.instance.TFToRemove
+    },
+    {
+      field = "group_id"
+      value = zendesk_support.group.instance.GroupToRemove
+    },
+    {
+      field = "notification_group"
+      value = [
+        zendesk_support.group.instance.GroupToRemove,
+        "bla",
+        "test",
+      ]
+    },
+    {
+      field = "notification_target"
+      value = [
+        zendesk_support.target.instance.TargetToRemove_url_target,
+        "tret",
+      ]
+    },
+    {
+      field = "notification_webhook"
+      value = [
+        zendesk_support.webhook.instance.WebhookToRemove,
+        [
+          [
+            "fdsf",
+            "fdsfs",
+          ],
+        ],
+      ]
+    },
+    {
+      field = zendesk_support.organization_field.instance.oftoremove
+      value = "123"
+    },
+    {
+      field = zendesk_support.user_field.instance.userfielddropdowntest
+      value = zendesk_support.user_field__custom_field_options.instance.userfielddropdowntest__v2
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = zendesk_support.organization_field.instance.oftoremove
+        operator = "is"
+        value = "32453"
+      },
+      {
+        field = zendesk_support.ticket_field.instance.tagger_tagger11
+        operator = "is"
+        value = zendesk_support.ticket_field__custom_field_options.instance.tagger_tagger11__v223
+      },
+      {
+        field = "brand_id"
+        operator = "is"
+        value = zendesk_support.brand.instance.brandToRemove
+      },
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk_support.ticket_form.instance.TFToRemove
+      },
+      {
+        field = "group_id"
+        operator = "is"
+        value = zendesk_support.group.instance.GroupToRemove
+      },
+      {
+        field = zendesk_support.user_field.instance.uftoremove
+        operator = "is"
+        value = "987"
+      },
+      {
+        field = "until_sla_next_breach_at"
+        operator = "is_business_hours"
+        value = "123"
+      },
+    ]
+    any = [
+      {
+        field = zendesk_support.user_field.instance.userfielddropdowntest
+        operator = "is"
+        value = zendesk_support.user_field__custom_field_options.instance.userfielddropdowntest__v2
+      },
+      {
+        field = zendesk_support.organization_field.instance.another_drop_down
+        operator = "is"
+        value = zendesk_support.organization_field__custom_field_options.instance.another_drop_down__option3
+      },
+    ]
+  }
+  raw_title = "BrokenAutomation"
+}

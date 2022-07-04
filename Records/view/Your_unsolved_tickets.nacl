@@ -1,0 +1,93 @@
+zendesk_support.view Your_unsolved_tickets@s {
+  title = "Your unsolved tickets"
+  active = true
+  execution = {
+    group_by = "status"
+    group_order = "asc"
+    sort_by = "nice_id"
+    sort_order = "desc"
+    group = {
+      id = "status"
+      title = "Status"
+      order = "asc"
+    }
+    sort = {
+      id = "ticket_id"
+      title = "ID"
+      order = "desc"
+    }
+    columns = [
+      {
+        id = "sla_next_breach_at"
+        title = "Next SLA breach"
+      },
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "type"
+        title = "Type"
+      },
+      {
+        id = "priority"
+        title = "Priority"
+      },
+    ]
+    fields = [
+      {
+        id = "sla_next_breach_at"
+        title = "Next SLA breach"
+      },
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "type"
+        title = "Type"
+      },
+      {
+        id = "priority"
+        title = "Priority"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "less_than"
+        value = "solved"
+      },
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = "current_user"
+      },
+      {
+        field = "current_tags"
+        operator = "not_includes"
+        value = "option2"
+      },
+    ]
+  }
+  watchable = true
+  raw_title = "Your unsolved tickets"
+}

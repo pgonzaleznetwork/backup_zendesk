@@ -1,0 +1,34 @@
+zendesk_support.trigger Yanai_Sened@s {
+  title = "Yanai Sened"
+  active = true
+  actions = [
+    {
+      field = "type"
+      value = "task"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "number_of_incidents"
+        operator = "greater_than"
+        value = "500"
+      },
+      {
+        field = "type"
+        operator = "value"
+        value = "problem"
+      },
+    ]
+    any = [
+      {
+        field = "ticket_form_id"
+        operator = "value"
+        value = zendesk_support.ticket_form.instance.Default_Ticket_Form@s
+      },
+    ]
+  }
+  description = "yanai test description"
+  raw_title = "Yanai Sened"
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

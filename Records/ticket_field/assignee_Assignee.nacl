@@ -1,0 +1,16 @@
+zendesk_support.ticket_field assignee_Assignee {
+  type = "assignee"
+  title = "Assignee"
+  raw_title = "Assignee"
+  description = "Agent assigned to your request"
+  raw_description = "Agent assigned to your request"
+  active = true
+  required = true
+  collapsed_for_agents = false
+  title_in_portal = "Assignee"
+  raw_title_in_portal = "Assignee"
+  visible_in_portal = true
+  editable_in_portal = false
+  required_in_portal = false
+  removable = false
+}

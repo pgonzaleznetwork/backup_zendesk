@@ -1,0 +1,24 @@
+zendesk_support.app_installation Slack_App_156097@su {
+  app_id = 156097
+  product = "support"
+  settings = {
+    name = "Slack App"
+    title = "Slack App"
+  }
+  settings_objects = [
+    {
+      name = "name"
+      value = "Slack App"
+    },
+    {
+      name = "title"
+      value = "Slack App"
+    },
+  ]
+  enabled = true
+  recurring_payment = false
+  collapsible = true
+  paid = false
+  has_unpaid_subscription = false
+  has_incomplete_subscription = false
+}

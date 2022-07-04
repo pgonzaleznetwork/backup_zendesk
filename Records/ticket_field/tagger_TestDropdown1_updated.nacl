@@ -1,0 +1,23 @@
+zendesk_support.ticket_field tagger_TestDropdown1_updated@us {
+  type = "tagger"
+  title = "TestDropdown1 updated"
+  raw_title = "TestDropdown1 updated"
+  description = "The desc for end users updated"
+  raw_description = "The desc for end users updated"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "TestDropdown1-envusers updated"
+  raw_title_in_portal = "TestDropdown1-envusers updated"
+  visible_in_portal = true
+  editable_in_portal = true
+  required_in_portal = true
+  removable = true
+  agent_description = "The desc updated again.."
+  custom_field_options = [
+    zendesk_support.ticket_field__custom_field_options.instance.tagger_TestDropdown1_updated_us__option1@uumuu,
+    zendesk_support.ticket_field__custom_field_options.instance.tagger_TestDropdown1_updated_us__option2@uumuu,
+    zendesk_support.ticket_field__custom_field_options.instance.tagger_TestDropdown1_updated_us__option3@uumuu,
+  ]
+  default_custom_field_option = zendesk_support.ticket_field__custom_field_options.instance.tagger_TestDropdown1_updated_us__option1@uumuu
+}

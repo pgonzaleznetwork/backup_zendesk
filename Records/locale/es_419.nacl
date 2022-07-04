@@ -1,0 +1,8 @@
+zendesk_support.locale es_419@b {
+  locale = "es-419"
+  name = "Español (Latinoamérica)"
+  native_name = "español (Latinoamérica)"
+  presentation_name = "Spanish (Latin America) - español (Latinoamérica)"
+  rtl = false
+  default = false
+}

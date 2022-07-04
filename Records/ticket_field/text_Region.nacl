@@ -1,0 +1,16 @@
+zendesk_support.ticket_field text_Region {
+  type = "text"
+  title = "Region"
+  raw_title = "Region"
+  description = ""
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "Region"
+  raw_title_in_portal = "Region"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+}

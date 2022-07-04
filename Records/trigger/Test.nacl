@@ -1,0 +1,21 @@
+zendesk_support.trigger Test {
+  title = "Test"
+  active = true
+  actions = [
+    {
+      field = zendesk_support.organization_field.instance.another_drop_down
+      value = zendesk_support.organization_field__custom_field_options.instance.another_drop_down__option2
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "current_via_id"
+        operator = "is"
+        value = zendesk_support.channel.instance.Chat
+      },
+    ]
+  }
+  raw_title = "Test"
+  category_id = zendesk_support.trigger_category.instance.Billing
+}

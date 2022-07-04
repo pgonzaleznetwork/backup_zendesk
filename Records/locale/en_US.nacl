@@ -1,0 +1,8 @@
+zendesk_support.locale en_US@b {
+  locale = "en-US"
+  name = "English"
+  native_name = "English (United States)"
+  presentation_name = "English (United States)"
+  rtl = false
+  default = true
+}

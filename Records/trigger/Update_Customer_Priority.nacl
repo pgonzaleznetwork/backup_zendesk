@@ -1,0 +1,21 @@
+zendesk_support.trigger Update_Customer_Priority@s {
+  title = "Update Customer Priority"
+  active = true
+  actions = [
+    {
+      field = zendesk_support.ticket_field.instance.tagger_Customer_Priority@us
+      value = zendesk_support.ticket_field__custom_field_options.instance.tagger_Customer_Priority_us__Medium@uumuu
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
+      },
+    ]
+  }
+  raw_title = "Update Customer Priority"
+  category_id = zendesk_support.trigger_category.instance.Field_Updates@s
+}

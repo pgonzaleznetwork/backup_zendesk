@@ -1,0 +1,3 @@
+zendesk_support.trigger_category General_Settings@s {
+  name = "General Settings"
+}

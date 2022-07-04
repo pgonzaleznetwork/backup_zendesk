@@ -1,0 +1,8 @@
+zendesk_support.ticket_field__custom_field_options tagger_Product_Area_us__Data_Management@uumuus {
+  name = "Data Management"
+  raw_name = "Data Management"
+  value = "data_management"
+  _parent = [
+    zendesk_support.ticket_field.instance.tagger_Product_Area@us,
+  ]
+}

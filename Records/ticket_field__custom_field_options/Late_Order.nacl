@@ -1,0 +1,18 @@
+zendesk_support.ticket_field__custom_field_options tagger_What_is_this_about__usssa__Late_Order@uuuuumuus {
+  name = "Late Order"
+  raw_name = "{{dc.about_option_-_late_order}}"
+  value = "late_order"
+  _parent = [
+    zendesk_support.ticket_field.instance.tagger_What_is_this_about_@usssa,
+  ]
+  _generated_dependencies = [
+    {
+      reference = zendesk_support.dynamic_content_item.instance.About_Option___Late_Order@ssbss
+      occurrences = [
+        {
+          location = zendesk_support.ticket_field__custom_field_options.instance.tagger_What_is_this_about__usssa__Late_Order@uuuuumuus.raw_name
+        },
+      ]
+    },
+  ]
+}

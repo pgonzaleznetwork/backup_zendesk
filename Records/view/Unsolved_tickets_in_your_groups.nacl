@@ -1,0 +1,88 @@
+zendesk_support.view Unsolved_tickets_in_your_groups@s {
+  title = "Unsolved tickets in your groups"
+  active = true
+  execution = {
+    group_by = "group"
+    group_order = "desc"
+    sort_by = "nice_id"
+    sort_order = "desc"
+    group = {
+      id = "group"
+      title = "Group"
+      order = "desc"
+    }
+    sort = {
+      id = "ticket_id"
+      title = "ID"
+      order = "desc"
+    }
+    columns = [
+      {
+        id = "ticket_id"
+        title = "ID"
+      },
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "sla_next_breach_at"
+        title = "Next SLA breach"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "status"
+        title = "Status"
+      },
+    ]
+    fields = [
+      {
+        id = "ticket_id"
+        title = "ID"
+      },
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "sla_next_breach_at"
+        title = "Next SLA breach"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "status"
+        title = "Status"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "less_than"
+        value = "solved"
+      },
+      {
+        field = "group_id"
+        operator = "is"
+        value = "current_groups"
+      },
+    ]
+  }
+  watchable = false
+  raw_title = "Unsolved tickets in your groups"
+}

@@ -1,0 +1,52 @@
+zendesk_support.routing_attribute_value Expert__brokenSkill {
+  name = "brokenSkill"
+  conditions = {
+    all = [
+      {
+        subject = "brand_id"
+        operator = "is"
+        value = "6093106816275"
+      },
+      {
+        subject = "ticket_form_id"
+        operator = "is"
+        value = "6093121147155"
+      },
+      {
+        subject = zendesk_support.user_field.instance.uftoremove
+        operator = "is"
+        value = "123"
+      },
+      {
+        subject = zendesk_support.organization_field.instance.oftoremove
+        operator = "is"
+        value = "123"
+      },
+      {
+        subject = "custom_fields_6093212521747"
+        operator = "is"
+        value = "2022-05-03"
+      },
+    ]
+    any = [
+      {
+        subject = zendesk_support.ticket_field.instance.tagger_tagger11
+        operator = "is"
+        value = zendesk_support.ticket_field__custom_field_options.instance.tagger_tagger11__v223
+      },
+      {
+        subject = zendesk_support.user_field.instance.userfielddropdowntest
+        operator = "is"
+        value = zendesk_support.user_field__custom_field_options.instance.userfielddropdowntest__v2
+      },
+      {
+        subject = zendesk_support.organization_field.instance.another_drop_down
+        operator = "is"
+        value = zendesk_support.organization_field__custom_field_options.instance.another_drop_down__option3
+      },
+    ]
+  }
+  _parent = [
+    zendesk_support.routing_attribute.instance.Expert,
+  ]
+}

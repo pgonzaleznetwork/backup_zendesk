@@ -1,0 +1,10 @@
+zendesk_support.support_address brandToRemove {
+  brand_id = zendesk_support.brand.instance.brandToRemove
+  default = true
+  name = "brandToRemove"
+  email = "support@brandtoremovesalto.zendesk.com"
+  forwarding_status = "verified"
+  spf_status = "verified"
+  cname_status = "verified"
+  domain_verification_status = "verified"
+}

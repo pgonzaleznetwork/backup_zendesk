@@ -1,0 +1,17 @@
+zendesk_support.ticket_field checkbox_TestCheckbox1 {
+  type = "checkbox"
+  title = "TestCheckbox1"
+  raw_title = "TestCheckbox1"
+  description = "lklsjdfkljsdfljsd"
+  raw_description = "lklsjdfkljsdfljsd"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "TestCheckbox1"
+  raw_title_in_portal = "TestCheckbox1"
+  visible_in_portal = true
+  editable_in_portal = false
+  required_in_portal = false
+  tag = "testcheckbox1"
+  removable = true
+}

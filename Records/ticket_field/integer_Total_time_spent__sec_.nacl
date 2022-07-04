@@ -1,0 +1,17 @@
+zendesk_support.ticket_field integer_Total_time_spent__sec_@usssjk {
+  type = "integer"
+  title = "Total time spent (sec)"
+  raw_title = "Total time spent (sec)"
+  description = "Total time spent (sec)"
+  raw_description = "Total time spent (sec)"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  regexp_for_validation = "\\A[-+]?\\d+\\z"
+  title_in_portal = "Total time spent (sec)"
+  raw_title_in_portal = "Total time spent (sec)"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+}

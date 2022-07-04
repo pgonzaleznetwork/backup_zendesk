@@ -1,0 +1,80 @@
+zendesk_support.view Current_tasks@s {
+  title = "Current tasks"
+  active = false
+  execution = {
+    group_by = "due_date"
+    group_order = "asc"
+    sort_by = "assignee"
+    sort_order = "desc"
+    group = {
+      id = "due_date"
+      title = "Due date"
+      order = "asc"
+    }
+    sort = {
+      id = "assignee"
+      title = "Assignee"
+      order = "desc"
+    }
+    columns = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+      {
+        id = "due_date"
+        title = "Due date"
+      },
+    ]
+    fields = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+      {
+        id = "due_date"
+        title = "Due date"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "less_than"
+        value = "solved"
+      },
+      {
+        field = "type"
+        operator = "is"
+        value = "task"
+      },
+    ]
+  }
+  watchable = false
+  raw_title = "Current tasks"
+}

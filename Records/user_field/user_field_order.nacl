@@ -1,0 +1,8 @@
+zendesk_support.user_field_order {
+  user_field_ids = [
+    zendesk_support.user_field.instance.userfield1,
+    zendesk_support.user_field.instance.piefield,
+    zendesk_support.user_field.instance.userfielddropdowntest,
+    zendesk_support.user_field.instance.uftoremove,
+  ]
+}

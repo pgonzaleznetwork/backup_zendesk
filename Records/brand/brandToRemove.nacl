@@ -1,0 +1,11 @@
+zendesk_support.brand brandToRemove {
+  name = "brandToRemove"
+  brand_url = "https://brandtoremovesalto.zendesk.com"
+  subdomain = "brandtoremovesalto"
+  has_help_center = false
+  help_center_state = "disabled"
+  active = true
+  default = false
+  is_deleted = false
+  signature_template = "{{agent.signature}}"
+}

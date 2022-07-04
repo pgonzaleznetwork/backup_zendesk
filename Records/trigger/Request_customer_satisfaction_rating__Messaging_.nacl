@@ -1,0 +1,27 @@
+zendesk_support.trigger Request_customer_satisfaction_rating__Messaging_@ssssjk {
+  title = "Request customer satisfaction rating (Messaging)"
+  active = true
+  actions = [
+    {
+      field = "notification_messaging_csat"
+      value = "requester_id"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "value"
+        value = "solved"
+      },
+      {
+        field = "via_id"
+        operator = "is"
+        value = zendesk_support.channel.instance.Messaging
+      },
+    ]
+  }
+  description = "Asks customer for a rating after the conversation is over. This trigger is created by the system."
+  raw_title = "Request customer satisfaction rating (Messaging)"
+  category_id = zendesk_support.trigger_category.instance.Field_Updates@s
+}

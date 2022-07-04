@@ -1,0 +1,14 @@
+zendesk_support.user_field userfield1 {
+  type = "dropdown"
+  key = "userfield1"
+  title = "userField1"
+  description = ""
+  raw_title = "userField1"
+  raw_description = ""
+  active = true
+  system = false
+  custom_field_options = [
+    zendesk_support.user_field__custom_field_options.instance.userfield1__v1,
+    zendesk_support.user_field__custom_field_options.instance.userfield1__v111,
+  ]
+}

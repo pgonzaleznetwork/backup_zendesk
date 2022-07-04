@@ -1,0 +1,52 @@
+zendesk_support.sla_policy SLAToDelete {
+  title = "SLAToDelete"
+  filter = {
+    all = [
+      {
+        field = "brand_id"
+        operator = "is"
+        value = zendesk_support.brand.instance.brandToRemove
+      },
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk_support.ticket_form.instance.TFToRemove
+      },
+      {
+        field = "group_id"
+        operator = "is"
+        value = zendesk_support.group.instance.GroupToRemove
+      },
+      {
+        field = zendesk_support.ticket_field.instance.date_ToRemove2
+        operator = "is"
+        value = "2022-05-10"
+      },
+      {
+        field = zendesk_support.ticket_field.instance.tagger_TestDropdown1_updated@us
+        operator = "is"
+        value = zendesk_support.ticket_field__custom_field_options.instance.tagger_TestDropdown1_updated_us__option3@uumuu
+      },
+      {
+        field = zendesk_support.user_field.instance.userfielddropdowntest
+        operator = "is"
+        value = zendesk_support.user_field__custom_field_options.instance.userfielddropdowntest__v2
+      },
+    ]
+    any = [
+      {
+        field = zendesk_support.organization_field.instance.another_drop_down
+        operator = "is"
+        value = zendesk_support.organization_field__custom_field_options.instance.another_drop_down__option3
+      },
+    ]
+  }
+  policy_metrics = [
+    {
+      priority = "urgent"
+      metric = "first_reply_time"
+      target = 60
+      business_hours = true
+    },
+  ]
+}

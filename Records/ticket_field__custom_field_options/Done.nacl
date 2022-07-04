@@ -1,0 +1,8 @@
+zendesk_support.ticket_field__custom_field_options tagger_Escalation_Status_us__Done@uumuu {
+  name = "Done"
+  raw_name = "Done"
+  value = "done"
+  _parent = [
+    zendesk_support.ticket_field.instance.tagger_Escalation_Status@us,
+  ]
+}

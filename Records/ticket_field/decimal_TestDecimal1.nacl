@@ -1,0 +1,17 @@
+zendesk_support.ticket_field decimal_TestDecimal1 {
+  type = "decimal"
+  title = "TestDecimal1"
+  raw_title = "TestDecimal1"
+  description = ""
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  regexp_for_validation = "\\A[-+]?[0-9]*[.,]?[0-9]+\\z"
+  title_in_portal = "TestDecimal1"
+  raw_title_in_portal = "TestDecimal1"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+}

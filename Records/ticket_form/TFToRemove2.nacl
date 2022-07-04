@@ -1,0 +1,68 @@
+zendesk_support.ticket_form TFToRemove2 {
+  name = "TFToRemove2"
+  raw_name = "TFToRemove2"
+  display_name = ""
+  raw_display_name = ""
+  end_user_visible = false
+  ticket_field_ids = [
+    zendesk_support.ticket_field.instance.status_Status,
+    zendesk_support.ticket_field.instance.group_Group,
+    zendesk_support.ticket_field.instance.assignee_Assignee,
+    zendesk_support.ticket_field.instance.subject_Subject,
+    zendesk_support.ticket_field.instance.description_Description,
+    zendesk_support.ticket_field.instance.date_ToRemove2,
+    zendesk_support.ticket_field.instance.decimal_ToRemove,
+    zendesk_support.ticket_field.instance.tagger_tagger11,
+    zendesk_support.ticket_field.instance.tagger_Customer_Priority@us,
+  ]
+  active = true
+  default = false
+  in_all_brands = false
+  restricted_brand_ids = [
+    zendesk_support.brand.instance.brandToRemove,
+  ]
+  agent_conditions = [
+    {
+      parent_field_id = zendesk_support.ticket_field.instance.tagger_tagger11
+      parent_field_type = "tagger"
+      value = zendesk_support.ticket_field__custom_field_options.instance.tagger_tagger11__v223
+      child_fields = [
+        {
+          id = zendesk_support.ticket_field.instance.tagger_Customer_Priority@us
+          is_required = false
+          required_on_statuses = {
+            type = "NO_STATUSES"
+          }
+        },
+        {
+          id = zendesk_support.ticket_field.instance.decimal_ToRemove
+          is_required = false
+          required_on_statuses = {
+            type = "NO_STATUSES"
+          }
+        },
+        {
+          id = zendesk_support.ticket_field.instance.date_ToRemove2
+          is_required = true
+          required_on_statuses = {
+            type = "ALL_STATUSES"
+          }
+        },
+      ]
+    },
+    {
+      parent_field_id = zendesk_support.ticket_field.instance.tagger_Customer_Priority@us
+      parent_field_type = "tagger"
+      value = zendesk_support.ticket_field__custom_field_options.instance.tagger_Customer_Priority_us__Critical@uumuu
+      child_fields = [
+        {
+          id = zendesk_support.ticket_field.instance.date_ToRemove2
+          is_required = false
+          required_on_statuses = {
+            type = "NO_STATUSES"
+          }
+        },
+      ]
+    },
+  ]
+}

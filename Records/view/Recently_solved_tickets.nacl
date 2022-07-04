@@ -1,0 +1,83 @@
+zendesk_support.view Recently_solved_tickets@s {
+  title = "Recently solved tickets"
+  active = true
+  execution = {
+    group_by = "assignee"
+    group_order = "asc"
+    sort_by = "solved"
+    sort_order = "desc"
+    group = {
+      id = "assignee"
+      title = "Assignee"
+      order = "asc"
+    }
+    sort = {
+      id = "solved"
+      title = "Solved"
+      order = "desc"
+    }
+    columns = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "solved"
+        title = "Solved"
+      },
+      {
+        id = "priority"
+        title = "Priority"
+      },
+      {
+        id = "group"
+        title = "Group"
+      },
+    ]
+    fields = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "solved"
+        title = "Solved"
+      },
+      {
+        id = "priority"
+        title = "Priority"
+      },
+      {
+        id = "group"
+        title = "Group"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "solved"
+      },
+    ]
+  }
+  watchable = false
+  raw_title = "Recently solved tickets"
+}

@@ -1,0 +1,42 @@
+zendesk_support.trigger Notify_requester_of_new_proactive_ticket@s {
+  title = "Notify requester of new proactive ticket"
+  active = true
+  actions = [
+    {
+      field = "notification_user"
+      value = [
+        "requester_and_ccs",
+        "{{ticket.title}}",
+        '''
+This ticket was created on your behalf.
+
+{{ticket.comments_formatted}}
+
+To add additional comments, reply to this email.
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Create"
+      },
+      {
+        field = "ticket_is_public"
+        operator = "is"
+        value = "public"
+      },
+      {
+        field = "role"
+        operator = "is"
+        value = "agent"
+      },
+    ]
+  }
+  description = "A proactive ticket is a ticket created by an agent on behalf of the requester."
+  raw_title = "Notify requester of new proactive ticket"
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

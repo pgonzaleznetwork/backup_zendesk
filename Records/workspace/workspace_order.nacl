@@ -1,0 +1,6 @@
+zendesk_support.workspace_order {
+  ids = [
+    zendesk_support.workspace.instance.Noam_Crazy_workspace@s,
+    zendesk_support.workspace.instance.My_WS@s,
+  ]
+}

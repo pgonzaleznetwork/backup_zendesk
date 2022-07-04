@@ -1,0 +1,19 @@
+zendesk_support.macro Delete__Submit_for_deletion@ffss {
+  title = "Delete::Submit for deletion"
+  active = true
+  actions = [
+    {
+      field = "assignee_id"
+      value = "pablo.gonzalez@salto.io"
+    },
+    {
+      field = "current_tags"
+      value = "review_delete"
+    },
+    {
+      field = "status"
+      value = "solved"
+    },
+  ]
+  raw_title = "Delete::Submit for deletion"
+}

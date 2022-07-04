@@ -1,0 +1,6 @@
+zendesk_support.oauth_global_client salto {
+  name = "salto"
+  identifier = "zdg-salto"
+  company = "Salto"
+  description = "Global OAuth client used in Salto SAAS"
+}

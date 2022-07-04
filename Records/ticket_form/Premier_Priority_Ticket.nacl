@@ -1,0 +1,19 @@
+zendesk_support.ticket_form Premier_Priority_Ticket@s {
+  name = "Premier Priority Ticket"
+  raw_name = "Premier Priority Ticket"
+  display_name = ""
+  raw_display_name = ""
+  end_user_visible = false
+  ticket_field_ids = [
+    zendesk_support.ticket_field.instance.status_Status,
+    zendesk_support.ticket_field.instance.group_Group,
+    zendesk_support.ticket_field.instance.assignee_Assignee,
+    zendesk_support.ticket_field.instance.tagger_Customer_Priority@us,
+    zendesk_support.ticket_field.instance.subject_Subject,
+    zendesk_support.ticket_field.instance.description_Description,
+    zendesk_support.ticket_field.instance.priority_Priority,
+  ]
+  active = true
+  default = false
+  in_all_brands = true
+}

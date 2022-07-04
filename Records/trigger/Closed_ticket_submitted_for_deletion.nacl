@@ -1,0 +1,27 @@
+zendesk_support.trigger Closed_ticket_submitted_for_deletion@s {
+  title = "Closed ticket submitted for deletion"
+  active = true
+  actions = [
+    {
+      field = "status"
+      value = "closed"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "solved"
+      },
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = "pablo.gonzalez@salto.io"
+      },
+    ]
+  }
+  description = "New trigger"
+  raw_title = "Closed ticket submitted for deletion"
+  category_id = zendesk_support.trigger_category.instance.Field_Updates@s
+}

@@ -1,0 +1,15 @@
+zendesk_support.routing_attribute_value Expert__Expert {
+  name = "Expert"
+  conditions = {
+    all = [
+      {
+        subject = zendesk_support.ticket_field.instance.tagger_Customer_Priority@us
+        operator = "is"
+        value = zendesk_support.ticket_field__custom_field_options.instance.tagger_Customer_Priority_us__Critical@uumuu
+      },
+    ]
+  }
+  _parent = [
+    zendesk_support.routing_attribute.instance.Expert,
+  ]
+}

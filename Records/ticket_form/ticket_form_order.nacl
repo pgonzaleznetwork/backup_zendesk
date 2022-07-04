@@ -1,0 +1,16 @@
+zendesk_support.ticket_form_order {
+  ticket_form_ids = [
+    zendesk_support.ticket_form.instance.tagger11_form@s,
+    zendesk_support.ticket_form.instance.Default_Ticket_Form@s,
+    zendesk_support.ticket_form.instance.TicketFormOne,
+    zendesk_support.ticket_form.instance.tf_1@zb,
+    zendesk_support.ticket_form.instance.Noam_TicketForm@s,
+    zendesk_support.ticket_form.instance.Premier_Priority_Ticket@s,
+    zendesk_support.ticket_form.instance.TFToRemove,
+    zendesk_support.ticket_form.instance.TFToRemove2,
+    zendesk_support.ticket_form.instance.Other,
+    zendesk_support.ticket_form.instance.Customer_Ticket_Form@s,
+    zendesk_support.ticket_form.instance.Platinum_Form@s,
+    zendesk_support.ticket_form.instance.Platinum,
+  ]
+}

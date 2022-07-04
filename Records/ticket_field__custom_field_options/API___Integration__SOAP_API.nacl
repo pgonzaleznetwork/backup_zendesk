@@ -1,0 +1,8 @@
+zendesk_support.ticket_field__custom_field_options tagger_Product_Area_us__API___Integration__SOAP_API@uumuusesffs {
+  name = "API & Integration::SOAP API"
+  raw_name = "API & Integration::SOAP API"
+  value = "api___integration__soap_api"
+  _parent = [
+    zendesk_support.ticket_field.instance.tagger_Product_Area@us,
+  ]
+}

@@ -1,0 +1,16 @@
+zendesk_support.ticket_field text_Salto_Id@us {
+  type = "text"
+  title = "Salto Id"
+  raw_title = "Salto Id"
+  description = ""
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "Salto Id"
+  raw_title_in_portal = "Salto Id"
+  visible_in_portal = true
+  editable_in_portal = true
+  required_in_portal = false
+  removable = true
+}

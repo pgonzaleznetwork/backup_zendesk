@@ -1,0 +1,8 @@
+zendesk_support.automation_order {
+  ids = [
+    zendesk_support.automation.instance.Automate_Ticket_Type_by_Priority@s,
+    zendesk_support.automation.instance.BrokenAutomation,
+    zendesk_support.automation.instance.Missed_Tier_3_Escalation@s,
+    zendesk_support.automation.instance.DP_s_test_automation@tss,
+  ]
+}

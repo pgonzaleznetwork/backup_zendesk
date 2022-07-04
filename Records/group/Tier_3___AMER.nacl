@@ -1,0 +1,7 @@
+zendesk_support.group Tier_3___AMER@ssbs {
+  is_public = true
+  name = "Tier 3 - AMER"
+  description = "Tier 3 agents in AMER region"
+  default = false
+  deleted = false
+}

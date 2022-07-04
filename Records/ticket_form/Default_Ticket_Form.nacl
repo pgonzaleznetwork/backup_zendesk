@@ -1,0 +1,20 @@
+zendesk_support.ticket_form Default_Ticket_Form@s {
+  name = "Default Ticket Form"
+  raw_name = "Default Ticket Form"
+  display_name = "Default Ticket Form"
+  raw_display_name = "Default Ticket Form"
+  end_user_visible = true
+  ticket_field_ids = [
+    zendesk_support.ticket_field.instance.status_Status,
+    zendesk_support.ticket_field.instance.group_Group,
+    zendesk_support.ticket_field.instance.assignee_Assignee,
+    zendesk_support.ticket_field.instance.subject_Subject,
+    zendesk_support.ticket_field.instance.description_Description,
+    zendesk_support.ticket_field.instance.lookup_CCE_Ticket@us,
+    zendesk_support.ticket_field.instance.tickettype_Type,
+    zendesk_support.ticket_field.instance.priority_Priority,
+  ]
+  active = true
+  default = false
+  in_all_brands = true
+}

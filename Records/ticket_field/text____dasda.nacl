@@ -1,0 +1,16 @@
+zendesk_support.ticket_field text____dasda@ummm {
+  type = "text"
+  title = "@@@dasda"
+  raw_title = "@@@dasda"
+  description = ""
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "@@@dasda"
+  raw_title_in_portal = "@@@dasda"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+}

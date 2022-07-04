@@ -1,0 +1,18 @@
+zendesk_support.webhook Slack_integration_Endpoint@s {
+  name = "Slack integration Endpoint"
+  status = "active"
+  endpoint = "https://slack-events.zendesk-integrations.com/zendesk/events"
+  http_method = "POST"
+  request_format = "json"
+  authentication = {
+    type = "basic_auth"
+    add_position = "header"
+  }
+  external_source = {
+    type = "zendesk_app"
+    data = {
+      app_id = 156097
+      installation_id = 1900003075125
+    }
+  }
+}

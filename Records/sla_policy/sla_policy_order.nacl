@@ -1,0 +1,8 @@
+zendesk_support.sla_policy_order {
+  sla_policy_ids = [
+    zendesk_support.sla_policy.instance.TomerTest2,
+    zendesk_support.sla_policy.instance.Demo,
+    zendesk_support.sla_policy.instance.SLAToDelete,
+    zendesk_support.sla_policy.instance.Premier_Priority@s,
+  ]
+}

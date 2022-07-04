@@ -1,0 +1,15 @@
+zendesk_support.workspace My_WS@s {
+  title = "My WS"
+  description = ""
+  macro_ids = [
+    1500047386421,
+  ]
+  apps = [
+    {
+      id = zendesk_support.app_installation.instance.Time_Tracking_35111@su
+      expand = false
+      position = 1
+    },
+  ]
+  activated = true
+}

@@ -1,0 +1,9 @@
+zendesk_support.macro_categories {
+  categories = [
+    "Answers",
+    "Customer Greeting",
+    "Delete",
+    "Escalate",
+    "SLA",
+  ]
+}

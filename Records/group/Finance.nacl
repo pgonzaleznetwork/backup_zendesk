@@ -1,0 +1,7 @@
+zendesk_support.group Finance {
+  is_public = true
+  name = "Finance"
+  description = " finance "
+  default = false
+  deleted = false
+}

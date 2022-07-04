@@ -1,0 +1,16 @@
+zendesk_support.ticket_field description_Description {
+  type = "description"
+  title = "Description"
+  raw_title = "Description"
+  description = "Please enter the details of your request. A member of our support staff will respond as soon as possible."
+  raw_description = "Please enter the details of your request. A member of our support staff will respond as soon as possible."
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "Description"
+  raw_title_in_portal = "Description"
+  visible_in_portal = true
+  editable_in_portal = true
+  required_in_portal = true
+  removable = false
+}

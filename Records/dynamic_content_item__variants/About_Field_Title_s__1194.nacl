@@ -1,0 +1,10 @@
+zendesk_support.dynamic_content_item__variants About_Field_Title_s__1194@uumuu {
+  content = "Elija el tipo de solicitud"
+  locale_id = zendesk_support.locale.instance.es_419@b
+  outdated = false
+  active = true
+  default = false
+  _parent = [
+    zendesk_support.dynamic_content_item.instance.About_Field_Title@s,
+  ]
+}

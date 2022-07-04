@@ -1,0 +1,39 @@
+zendesk_support.trigger Notify_assignee_of_reopened_ticket@s {
+  title = "Notify assignee of reopened ticket"
+  active = true
+  actions = [
+    {
+      field = "notification_user"
+      value = [
+        "assignee_id",
+        "[{{ticket.account}}] Re: {{ticket.title}}",
+        '''
+This ticket (#{{ticket.id}}) has been reopened.
+
+{{ticket.comments_formatted}}
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "assignee_id"
+        operator = "is_not"
+        value = "current_user"
+      },
+      {
+        field = "status"
+        operator = "value_previous"
+        value = "solved"
+      },
+      {
+        field = "status"
+        operator = "is_not"
+        value = "closed"
+      },
+    ]
+  }
+  raw_title = "Notify assignee of reopened ticket"
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

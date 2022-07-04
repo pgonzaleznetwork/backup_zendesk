@@ -1,0 +1,11 @@
+zendesk_support.webhook WebhookToRemove {
+  name = "WebhookToRemove"
+  description = "desc"
+  status = "active"
+  subscriptions = [
+    "conditional_ticket_events",
+  ]
+  endpoint = "https://www.example.com/200"
+  http_method = "GET"
+  request_format = "json"
+}

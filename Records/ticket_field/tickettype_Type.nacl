@@ -1,0 +1,34 @@
+zendesk_support.ticket_field tickettype_Type {
+  type = "tickettype"
+  title = "Type"
+  raw_title = "Type"
+  description = "Request type"
+  raw_description = "Request type"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "Type"
+  raw_title_in_portal = "Type"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+  system_field_options = [
+    {
+      name = "Question"
+      value = "question"
+    },
+    {
+      name = "Incident"
+      value = "incident"
+    },
+    {
+      name = "Problem"
+      value = "problem"
+    },
+    {
+      name = "Task"
+      value = "task"
+    },
+  ]
+}

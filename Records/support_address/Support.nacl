@@ -1,0 +1,9 @@
+zendesk_support.support_address Support {
+  brand_id = zendesk_support.brand.instance.Salto
+  name = "Support"
+  email = "helpme@d3v-salto2.zendesk.com"
+  forwarding_status = "verified"
+  spf_status = "verified"
+  cname_status = "verified"
+  domain_verification_status = "verified"
+}

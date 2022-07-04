@@ -1,0 +1,32 @@
+zendesk_support.routing_attribute_value Test__Test1 {
+  name = "Test1"
+  conditions = {
+    all = [
+      {
+        subject = "ticket_form_id"
+        operator = "is"
+        value = zendesk_support.ticket_form.instance.Default_Ticket_Form@s
+      },
+      {
+        subject = "number_of_incidents"
+        operator = "greater_than"
+        value = "213"
+      },
+    ]
+    any = [
+      {
+        subject = "organization_id"
+        operator = "is"
+        value = "1500709144521"
+      },
+      {
+        subject = zendesk_support.ticket_field.instance.tagger_tagger11
+        operator = "is"
+        value = zendesk_support.ticket_field__custom_field_options.instance.tagger_tagger11__v222
+      },
+    ]
+  }
+  _parent = [
+    zendesk_support.routing_attribute.instance.Test,
+  ]
+}

@@ -1,0 +1,38 @@
+zendesk_support.macro Escalate__Tier_2___AMER@ffssbs {
+  title = "Escalate::Tier 2 - AMER"
+  active = true
+  description = "Escalate the case to Tier 2"
+  actions = [
+    {
+      field = "status"
+      value = "hold"
+    },
+    {
+      field = "comment_value_html"
+      value = "<p>Hi {{ticket.requester.name}}​ ,</p><p><br></p><p>I've escalated this case to Tier 2 for further support. They'll reach out to you within 2 days.</p>"
+    },
+    {
+      field = "comment_mode_is_public"
+      value = "true"
+    },
+    {
+      field = zendesk_support.ticket_field.instance.tagger_Escalation_Status@us
+      value = zendesk_support.ticket_field__custom_field_options.instance.tagger_Escalation_Status_us__Escalated@uumuu
+    },
+    {
+      field = "group_id"
+      value = zendesk_support.group.instance.Tier_2___AMER@ssbs
+    },
+    {
+      field = "current_tags"
+      value = "escalated"
+    },
+  ]
+  restriction = {
+    type = "Group"
+    ids = [
+      zendesk_support.group.instance.Tier_1___AMER@ssbs,
+    ]
+  }
+  raw_title = "Escalate::Tier 2 - AMER"
+}

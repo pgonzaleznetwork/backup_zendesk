@@ -1,0 +1,9 @@
+zendesk_support.target TargetToRemove_url_target {
+  type = "url_target"
+  title = "TargetToRemove"
+  active = true
+  method = "get"
+  attribute = "test"
+  username = "user"
+  target_url = "https://www.example.com/200"
+}

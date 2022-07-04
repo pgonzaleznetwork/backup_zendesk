@@ -1,0 +1,36 @@
+zendesk_support.trigger Auto_assign_to_first_email_responding_agent@bsssss {
+  title = "Auto-assign to first email responding agent"
+  active = false
+  actions = [
+    {
+      field = "assignee_id"
+      value = "current_user"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Change"
+      },
+      {
+        field = "current_via_id"
+        operator = "is"
+        value = zendesk_support.channel.instance.Email
+      },
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = ""
+      },
+      {
+        field = "role"
+        operator = "is_not"
+        value = "end_user"
+      },
+    ]
+  }
+  raw_title = "Auto-assign to first email responding agent"
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

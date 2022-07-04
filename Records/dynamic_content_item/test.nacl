@@ -1,0 +1,9 @@
+zendesk_support.dynamic_content_item test {
+  name = "test"
+  placeholder = "{{dc.test}}"
+  default_locale_id = zendesk_support.locale.instance.en_US@b
+  outdated = false
+  variants = [
+    zendesk_support.dynamic_content_item__variants.instance.test__1,
+  ]
+}

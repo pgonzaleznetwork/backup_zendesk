@@ -1,0 +1,10 @@
+zendesk_support.dynamic_content_item__variants About_Option___Late_Order_ssbss__1194@uuuuumuu {
+  content = "Mi order no llego"
+  locale_id = zendesk_support.locale.instance.es_419@b
+  outdated = false
+  active = true
+  default = false
+  _parent = [
+    zendesk_support.dynamic_content_item.instance.About_Option___Late_Order@ssbss,
+  ]
+}

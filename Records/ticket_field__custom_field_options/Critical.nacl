@@ -1,0 +1,8 @@
+zendesk_support.ticket_field__custom_field_options tagger_Customer_Priority_us__Critical@uumuu {
+  name = "Critical"
+  raw_name = "Critical"
+  value = "high"
+  _parent = [
+    zendesk_support.ticket_field.instance.tagger_Customer_Priority@us,
+  ]
+}

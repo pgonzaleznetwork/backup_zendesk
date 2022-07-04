@@ -1,0 +1,7 @@
+zendesk_support.routing_attribute Test {
+  name = "Test"
+  values = [
+    zendesk_support.routing_attribute_value.instance.Test__Test1,
+    zendesk_support.routing_attribute_value.instance.Test__Test2,
+  ]
+}

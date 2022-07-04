@@ -1,0 +1,66 @@
+zendesk_support.view Yanai_test_view@s {
+  title = "Yanai test view"
+  active = true
+  description = "yanai?"
+  execution = {
+    group_by = "updated"
+    group_order = "asc"
+    sort_order = "desc"
+    group = {
+      id = "updated"
+      title = "Updated"
+      order = "asc"
+    }
+    columns = [
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+    fields = [
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "requester_id"
+        operator = "is"
+        value = "current_user"
+      },
+    ]
+    any = [
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = "neta.marcus@salto.io"
+      },
+      {
+        field = zendesk_support.ticket_field.instance.tagger_tagger11
+        operator = "is"
+        value = zendesk_support.ticket_field__custom_field_options.instance.tagger_tagger11__v224
+      },
+    ]
+  }
+  watchable = true
+  raw_title = "Yanai test view"
+}

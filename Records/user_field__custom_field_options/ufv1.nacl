@@ -1,0 +1,8 @@
+zendesk_support.user_field__custom_field_options userfielddropdowntest__ufv1 {
+  name = "ufv1"
+  raw_name = "ufv1"
+  value = "ufv11"
+  _parent = [
+    zendesk_support.user_field.instance.userfielddropdowntest,
+  ]
+}

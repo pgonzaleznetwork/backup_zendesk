@@ -1,0 +1,74 @@
+zendesk_support.view Unassigned_tickets@s {
+  title = "Unassigned tickets"
+  active = true
+  execution = {
+    group_order = "asc"
+    sort_by = "created"
+    sort_order = "desc"
+    sort = {
+      id = "created"
+      title = "Requested"
+      order = "desc"
+    }
+    columns = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "priority"
+        title = "Priority"
+      },
+      {
+        id = "group"
+        title = "Group"
+      },
+    ]
+    fields = [
+      {
+        id = "subject"
+        title = "Subject"
+      },
+      {
+        id = "requester"
+        title = "Requester"
+      },
+      {
+        id = "created"
+        title = "Requested"
+      },
+      {
+        id = "priority"
+        title = "Priority"
+      },
+      {
+        id = "group"
+        title = "Group"
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = ""
+      },
+      {
+        field = "status"
+        operator = "less_than"
+        value = "solved"
+      },
+    ]
+  }
+  watchable = true
+  raw_title = "Unassigned tickets"
+}

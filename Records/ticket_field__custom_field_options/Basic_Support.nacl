@@ -1,0 +1,8 @@
+zendesk_support.ticket_field__custom_field_options tagger_Support_Level_us__Basic_Support@uumuus {
+  name = "Basic Support"
+  raw_name = "Basic Support"
+  value = "basic_support"
+  _parent = [
+    zendesk_support.ticket_field.instance.tagger_Support_Level@us,
+  ]
+}

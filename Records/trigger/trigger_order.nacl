@@ -1,0 +1,63 @@
+zendesk_support.trigger_order {
+  order = [
+    {
+      category = zendesk_support.trigger_category.instance.Notifications
+      ids = [
+        zendesk_support.trigger.instance.Notify_requester_of_new_proactive_ticket@s,
+        zendesk_support.trigger.instance.newTrigger,
+        zendesk_support.trigger.instance.Notify_requester_and_CCs_of_comment_update@s,
+        zendesk_support.trigger.instance.NoamTest,
+        zendesk_support.trigger.instance.Notify_assignee_of_reopened_ticket@s,
+        zendesk_support.trigger.instance.Notify_assignee_of_comment_update@s,
+        zendesk_support.trigger.instance.Notify_requester_and_CCs_of_received_request@s,
+        zendesk_support.trigger.instance.Notify_assignee_of_assignment@s,
+        zendesk_support.trigger.instance.Yanai_Sened@s,
+        zendesk_support.trigger.instance.Assign_Account_Manager_to_High_Priority_Tickets@s,
+        zendesk_support.trigger.instance.Notify_Tier_3_of_new_escalated_ticket@s,
+        zendesk_support.trigger.instance.newTrigger2,
+        zendesk_support.trigger.instance.Auto_assign_to_first_email_responding_agent@bsssss,
+        zendesk_support.trigger.instance.Notify_group_of_assignment@s,
+        zendesk_support.trigger.instance.Notify_all_agents_of_received_request@s,
+        zendesk_support.trigger.instance.Neta_empty_org_test_and_1231@s,
+      ]
+    },
+    {
+      category = zendesk_support.trigger_category.instance.Billing
+      ids = [
+        zendesk_support.trigger.instance.michel_scott_trigger@s,
+        zendesk_support.trigger.instance.Test,
+        zendesk_support.trigger.instance.Test1,
+      ]
+    },
+    {
+      category = zendesk_support.trigger_category.instance.Other
+      ids = [
+        zendesk_support.trigger.instance.Slack_Ticket_Trigger@s,
+        zendesk_support.trigger.instance.phone_test@s,
+        zendesk_support.trigger.instance.BrokenTrigger2,
+      ]
+    },
+    {
+      category = zendesk_support.trigger_category.instance.Answer_Bot_Triggers@s
+      ids = [
+        zendesk_support.trigger.instance.Example_Answer_Bot_trigger_for_Noam_Hammer@s,
+      ]
+    },
+    {
+      category = zendesk_support.trigger_category.instance.Field_Updates@s
+      ids = [
+        zendesk_support.trigger.instance.Update_Customer_Priority@s,
+        zendesk_support.trigger.instance.Transfer_to_EMEA_Group@s,
+        zendesk_support.trigger.instance.Closed_ticket_submitted_for_deletion@s,
+        zendesk_support.trigger.instance.Request_customer_satisfaction_rating__Messaging_@ssssjk,
+        zendesk_support.trigger.instance.Request_customer_satisfaction_rating__social_messaging_@ssssjsk,
+      ]
+    },
+    {
+      category = zendesk_support.trigger_category.instance.General_Settings@s
+      ids = [
+        zendesk_support.trigger.instance.Set_priority_and_group@s,
+      ]
+    },
+  ]
+}

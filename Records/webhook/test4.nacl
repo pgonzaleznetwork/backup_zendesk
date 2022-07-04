@@ -1,0 +1,11 @@
+zendesk_support.webhook test4 {
+  name = "test4"
+  status = "active"
+  endpoint = "https://www.example.com/none"
+  http_method = "POST"
+  request_format = "json"
+  authentication = {
+    type = "basic_auth"
+    add_position = "header"
+  }
+}

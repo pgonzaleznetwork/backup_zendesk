@@ -1,0 +1,24 @@
+zendesk_support.view_order {
+  ids = [
+    zendesk_support.view.instance.All,
+    zendesk_support.view.instance.Your_unsolved_tickets@s,
+    zendesk_support.view.instance.Unassigned_tickets@s,
+    zendesk_support.view.instance.All_unsolved_tickets@s,
+    zendesk_support.view.instance.Tickets_submitted_for_deletion@s,
+    zendesk_support.view.instance.Recently_updated_tickets@s,
+    zendesk_support.view.instance.New_tickets_in_your_groups@s,
+    zendesk_support.view.instance.Pending_tickets@s,
+    zendesk_support.view.instance.Unsolved_tickets_in_your_groups@s,
+    zendesk_support.view.instance.Yanai_test_view@s,
+    zendesk_support.view.instance.Recently_solved_tickets@s,
+    zendesk_support.view.instance.Support_Tickets_APAC@s,
+    zendesk_support.view.instance.BrokenView,
+    zendesk_support.view.instance.Management_Escalation_Cases___All@sssbs,
+    zendesk_support.view.instance.Created_Today@s,
+    zendesk_support.view.instance.Tier_1___All_Regions@ssbss,
+    zendesk_support.view.instance.support_engineer___My_own_tickets@ssbsss,
+    zendesk_support.view.instance.Platinum,
+    zendesk_support.view.instance.Current_tasks@s,
+    zendesk_support.view.instance.Overdue_tasks@s,
+  ]
+}

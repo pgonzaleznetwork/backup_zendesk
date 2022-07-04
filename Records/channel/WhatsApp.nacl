@@ -1,0 +1,3 @@
+zendesk_support.channel WhatsApp {
+  name = "WhatsApp"
+}

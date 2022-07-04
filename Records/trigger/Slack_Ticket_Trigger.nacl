@@ -1,0 +1,38 @@
+zendesk_support.trigger Slack_Ticket_Trigger@s {
+  title = "Slack Ticket Trigger"
+  active = true
+  actions = [
+    {
+      field = "notification_webhook"
+      value = [
+        zendesk_support.webhook.instance.Slack_integration_Endpoint@s,
+        '''
+{
+	"ticket_id": "{{ticket.id}}",
+	 "status": "{{ticket.status}}",
+	 "updated_at": "{{ticket.updated_at_with_timestamp}}",
+	 "subdomain": "{{ticket.account}}",
+	 "ticket_latest_comment": "{{ticket.latest_comment}}",
+	 "updated_by": "{{current_user.name}}"
+}
+''',
+      ]
+    },
+  ]
+  conditions = {
+    any = [
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Create"
+      },
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Change"
+      },
+    ]
+  }
+  raw_title = "Slack Ticket Trigger"
+  category_id = zendesk_support.trigger_category.instance.Other
+}

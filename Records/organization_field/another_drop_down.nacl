@@ -1,0 +1,15 @@
+zendesk_support.organization_field another_drop_down {
+  type = "dropdown"
+  key = "another_drop_down"
+  title = "another drop down"
+  description = "drop menu"
+  raw_title = "another drop down"
+  raw_description = "drop menu"
+  active = true
+  system = false
+  custom_field_options = [
+    zendesk_support.organization_field__custom_field_options.instance.another_drop_down__option2,
+    zendesk_support.organization_field__custom_field_options.instance.another_drop_down__option3,
+    zendesk_support.organization_field__custom_field_options.instance.another_drop_down__NoamOrgTagTest,
+  ]
+}

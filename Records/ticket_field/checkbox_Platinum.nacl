@@ -1,0 +1,18 @@
+zendesk_support.ticket_field checkbox_Platinum {
+  type = "checkbox"
+  title = "Platinum"
+  raw_title = "Platinum"
+  description = ""
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "Platinum"
+  raw_title_in_portal = "Platinum"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  tag = ""
+  removable = true
+  agent_description = "Platinum Field"
+}

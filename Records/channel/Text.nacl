@@ -1,0 +1,3 @@
+zendesk_support.channel Text {
+  name = "Text"
+}

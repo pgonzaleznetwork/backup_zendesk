@@ -1,0 +1,35 @@
+zendesk_support.automation Missed_Tier_3_Escalation@s {
+  title = "Missed Tier 3 Escalation"
+  active = true
+  actions = [
+    {
+      field = "current_tags"
+      value = "missed_escalation_sla"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = zendesk_support.ticket_field.instance.tagger_Escalation_Status@us
+        operator = "is"
+        value = zendesk_support.ticket_field__custom_field_options.instance.tagger_Escalation_Status_us__Escalated@uumuu
+      },
+      {
+        field = "updated_at"
+        operator = "greater_than_business_hours"
+        value = "8"
+      },
+      {
+        field = "group_id"
+        operator = "is"
+        value = zendesk_support.group.instance.Tier_3___AMER@ssbs
+      },
+      {
+        field = "current_tags"
+        operator = "not_includes"
+        value = "missed_escalation_sla"
+      },
+    ]
+  }
+  raw_title = "Missed Tier 3 Escalation"
+}

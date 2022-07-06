@@ -11,7 +11,7 @@ zendesk_support.trigger Notify_requester_and_CCs_of_comment_update@s {
 Your request ({{ticket.id}}) has been updated. To add additional comments, reply to this email.
 {{ticket.comments_formatted}}
 
-success agent
+support engineer
 {{ticket.assignee.name}}
 ''',
       ]

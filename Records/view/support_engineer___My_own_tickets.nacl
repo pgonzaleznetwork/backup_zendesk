@@ -1,5 +1,5 @@
 zendesk_support.view support_engineer___My_own_tickets@ssbsss {
-  title = "success agent - My own tickets"
+  title = "support engineer - My own tickets"
   active = true
   execution = {
     group_by = "status"
@@ -89,5 +89,5 @@ zendesk_support.view support_engineer___My_own_tickets@ssbsss {
     ]
   }
   watchable = true
-  raw_title = "success agent - My own tickets"
+  raw_title = "support engineer - My own tickets"
 }

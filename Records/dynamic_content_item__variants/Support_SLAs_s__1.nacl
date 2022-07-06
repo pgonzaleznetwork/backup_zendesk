@@ -2,7 +2,7 @@ zendesk_support.dynamic_content_item__variants Support_SLAs_s__1@umuu {
   content = '''
 Please note your SLA is based on your support level: {{ticket.ticket_field_6174680826515}}
 
-success agent
+support engineer
 {{ticket.assignee.name}}
 '''
   locale_id = zendesk_support.locale.instance.en_US@b

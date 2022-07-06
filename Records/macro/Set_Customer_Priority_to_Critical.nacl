@@ -12,7 +12,7 @@ zendesk_support.macro Set_Customer_Priority_to_Critical@s {
     },
     {
       field = "comment_value_html"
-      value = "<p>We are escalating this case to the next tier.&nbsp;</p><p><br></p><p>New Priority: {{ticket.ticket_field_5848842841875}}</p><p><br></p><p>{{ticket.ticket_field_option_title_5848842841875}}<br></p><p><br></p><p>Please note your SLA is based on your support level: {{ticket.ticket_field_6174680826515}}<br></p><p><br></p><p>Your success agent</p><p>{{ticket.assignee.name}}​&nbsp;</p>"
+      value = "<p>We are escalating this case to the next tier.&nbsp;</p><p><br></p><p>New Priority: {{ticket.ticket_field_5848842841875}}</p><p><br></p><p>{{ticket.ticket_field_option_title_5848842841875}}<br></p><p><br></p><p>Please note your SLA is based on your support level: {{ticket.ticket_field_6174680826515}}<br></p><p><br></p><p>Your support engineer</p><p>{{ticket.assignee.name}}​&nbsp;</p>"
     },
     {
       field = "set_tags"
